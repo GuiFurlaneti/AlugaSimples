@@ -61,7 +61,12 @@ Contato
 Se tiver dúvidas ou precisar das credenciais para testar o login, entre em contato:
 
 Nome: Leandro Silva Sampaio
+
 Email: Leandro_sampaio.dasilva1@outlook.com
+
 Telefone (Whatsapp): +55 11 98557-0037
+
 LinkedIn: https://www.linkedin.com/in/leandro-sampaio-66248b230/
+
 Portifólio web: https://leandrosampaio7.github.io/webpage/index
+
