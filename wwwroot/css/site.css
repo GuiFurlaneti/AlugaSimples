@@ -1,0 +1,3072 @@
+﻿/* Estilizando a barra de rolagem */
+body::-webkit-scrollbar {
+    width: 05px; /* Largura da barra de rolagem */
+}
+
+body::-webkit-scrollbar-track {
+    background: #B8B8B8; /* Cor do fundo da barra de rolagem */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #707070; /* Cor do "polegar" da barra de rolagem */
+    border-radius: 05px; /* Bordas arredondadas do polegar */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #5f5e5e; /* Cor do polegar quando passa o mouse por cima */
+}
+
+* {
+    font-family: 'Poppins', 'Roboto', 'Montserrat', 'Open Sans', sans-serif;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    font-family: 'Poppins', 'Roboto', 'Montserrat', 'Open Sans', sans-serif;
+    color: #fff;
+}
+
+body {
+    margin-bottom: 05px;
+    background: #F3F3F3;
+    font-family: 'Poppins', 'Roboto', 'Montserrat', 'Open Sans', sans-serif;
+    color: #272727;
+    max-width: 1920px;
+    overflow-x: hidden;
+}
+
+.navbar-custom {
+    background-color: none; /* Cor de fundo customizada */
+    width: 100%;
+    height: 100px;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: #ffffff; /* Cor dos textos */
+}
+
+#logo-home {
+    padding-left: 100px;
+    width: auto;
+    height: 65px;
+}
+
+.navbar {
+    z-index: 100;
+}
+
+#navbarNavMenu {
+    display: flex;
+    align-items: center; /* Alinha o conte�do na parte inferior */
+    height: 100px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0.8rem;
+    padding-left: 0.8rem;
+}
+
+#navbarNavMenu ul li {
+    margin: 0px 15px;
+    height: 100px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link{
+    height: 100px;
+    justify-items: center;
+    align-items: center;
+    display: flex;
+}
+
+.nav-item {
+    margin-top: 5px;
+}
+
+.nav-item:hover {
+    border-bottom: 2px solid #272727;
+}
+
+.navbar .active {
+    margin-bottom: 20px;
+    border-bottom: 3px solid #272727;
+    font-weight: bold;
+}
+
+.nav-link {
+    padding: 05px 20px;
+    margin: 5px;
+}
+
+#navbarNavRedes {
+    padding-right: 80px;
+}
+
+#navbarNavRedes ul li a{
+    padding: 0px 05px;
+    color: #272727;
+}
+
+#navbarNavRedes ul li a svg:hover {
+    color: #707070;
+    cursor: pointer;
+}
+
+#navbarNavMenu ul li a{
+    color: #272727;
+}
+
+.nav-item a svg {
+    right: 0;
+}
+
+#menu-mobile-id {
+    display: none;
+}
+
+.menu-mobile {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000000c3;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    z-index: 101;
+}
+
+.menu-options {
+    background: #F3F3F3;
+    margin: 0;
+    display: flex;
+    padding-top: 40px;
+    justify-content: center;
+    width: 50%;
+    height: 100vh;
+}
+
+.menu-options ul li a {
+    text-decoration: none;
+    color: #272727 !important;
+}
+
+#mobile-link {
+    padding: 1em 0.60em;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+#menuClose {
+    width: 100%;
+    height: 50px;
+    align-items: end;
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+}
+
+#menuClose li {
+    margin-bottom: 3em;
+}
+
+#menuMobileOptions li {
+    margin: 0.60em 0;
+}
+
+.redes-sociais-mobile ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.redes-sociais-mobile ul li {
+    margin: 0;
+    padding: 0;
+}
+
+.redes-sociais-mobile ul li svg {
+    margin: 0 10px;
+}
+
+.nav-item a svg {
+    right: 0;
+}
+
+.text-home-page h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    padding: 0 5%;
+}
+
+.text-home-page h6 {
+    font-size: 1.5em;
+    font-weight: 200;
+    padding: 0 5%;
+}
+
+.txt_home {
+    width: 600px;
+    z-index: 3;
+}
+
+.button {
+    display: inline-block;
+    padding: .80rem 1.6rem;
+    border-radius: 10rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    color: #fff;
+    text-transform: uppercase;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.button:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #086fef, #2680b2);
+    border-radius: 10rem;
+    z-index: -2;
+}
+
+.button:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #fff;
+    transition: all .3s;
+    border-radius: 10rem;
+    z-index: -1;
+}
+
+.button:hover {
+    color: #272727;
+}
+
+.button:hover:before {
+    width: 100%;
+}
+
+.rodape {
+    height: 30px;
+    max-height: 50px;
+    width: 100%;
+    max-width: 100%;
+    background: #CDCDCD;
+    color: #272727;
+    font-weight: 400;
+    font-size: 0.75em;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+}
+
+#menuOpen {
+    display: none;
+    cursor: pointer;
+}
+
+.carousel {
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-images {
+    position: absolute; /* Permite sobreposição */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+    background: url('path/to/your/image.jpg') no-repeat center center;
+    background-size: cover; 
+}
+
+.carousel-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2; /* Coloca a camada acima das imagens */
+    color: #fff; /* Ajuste conforme necessário */
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 3;
+    padding-bottom: 05px;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff7a; /* Cor dos dots */
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.carousel-dot.active {
+    background-color: #ffffff; /* Cor do dot ativo */
+    cursor: pointer;
+}
+
+.carousel-dots div{
+    cursor: pointer;
+}
+
+.ct-pacotes-aluguel{
+    width: 100%;
+}
+
+.pacotes-aluguel{
+    margin: 4% 10%;
+}
+
+.pacotes-aluguel h1{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.pacotes-aluguel h2 {
+    font-size: 1.2em;
+    font-weight: 400;
+    padding-bottom: 1%;
+}
+
+.pacotes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pacote {
+    width: 90%;
+    height: auto;
+}
+
+.pacote img{
+    width: 90%;
+    height: auto;
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.desc-pacote {
+    background: #E7E7E7;
+    width: 90%;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    position: relative;
+}
+
+.ct-desc-pacote{
+    margin: 0 10%;
+    text-align: center;
+}
+
+.ct-desc-pacote h1 {
+    font-size: 1em;
+    font-weight: 800;
+    color: #0023FF;
+}
+
+.ct-desc-pacote h2 {
+    font-size: 1em;
+    font-weight: 400;
+    color: #272727;
+}
+
+.ct-pacotes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fotos {
+    width: 100%;
+}
+
+.ct-fotos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding-top: 10px;
+}
+
+.foto-filters {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+    padding-bottom: 05px;
+}
+
+.filter{
+    margin: 1% 2%;
+    cursor: pointer;
+}
+
+.filter:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pack-fotos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pack {
+    padding: 0 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5%;
+}
+
+.pack-casamentos{
+    display: flex;
+}
+
+.ct-img  {
+    height: auto;
+    width: 300px;
+}
+
+.quadroX {
+    height: 200px;
+    width: 300px;
+    padding: 1%;
+}
+
+.quadroY {
+    height: 400px;
+    width: 300px;
+    padding: 1%;
+}
+
+#aniversarios, #festas, #eventos, #chaDeBebe {
+    display: none;
+}
+
+#active-casamentos{
+    font-weight: bold;
+}
+
+.back-filters, .avance-filters, .mob {
+    display: none;
+}
+
+
+
+
+
+/* CALENDARIO */
+:root {
+    --primary-color: #fec303;
+    --text-color: #1d1d1d;
+    --bg-color: #edf7fd;
+    --btn-color: #B8B8B8;
+}
+
+.ct {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 1% 1% 5% 1%;
+}
+
+.pb-3 {
+    padding-bottom: 0px !important;
+}
+
+
+.calendar {
+    width: 100%;
+    max-width: 600px;
+    padding: 30px 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #D9D9D9, #C0C0C0);
+}
+
+.calendar .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+}
+
+.calendar .header .month {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.calendar .header .btns {
+    display: flex;
+    gap: 10px;
+}
+
+.calendar .header .btns .btn {
+    width: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: var(--text-color);
+    background-color: var(--btn-color);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.calendar .header .btns .btn:hover {
+    background: linear-gradient(135deg, #0023FF, #5C73FF);
+    transform: scale(1.05);
+    color: #fff;
+}
+
+.weekdays {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.weekdays .day {
+    width: calc(100% / 7 - 10px);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.days .day {
+    width: calc(100% / 7 - 10px);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color);
+    background-color: var(--btn-color);
+    transition: all 0.3s;
+}
+
+.days .day:not(.next):not(.prev):hover {
+    color: #fff;
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #4155cc, #2d41b4);
+}
+
+.days .day.today {
+    color: #fff;
+    background: linear-gradient(135deg, #4155cc, #2d41b4);
+}
+
+.days .day.next,
+.days .day.prev {
+    color: var(--text-color);
+    background: #CCCCCC;
+}
+
+.blockDay {
+    /*background: linear-gradient(135deg, #fa3333, #ff6767);*/
+    /*background: linear-gradient(135deg, #e74c3c, #e74c3c);*/
+    background: linear-gradient(135deg, #e67e22, #e67e22);
+    color: #f2f2f2 !important;
+}
+
+.modalReservar {
+    margin: 0 10px;
+    width: 100%;
+    min-height: 500px;
+    max-width: 400px;
+    padding: 2% 2%;
+    border-radius: 40px;
+    background: linear-gradient(135deg, #4155cc, #2d41b4);
+    color: #ffffff;
+    font-size: 0.9em;
+}
+
+.modalReservar .form-control {
+    background: #CCCCCC;
+    color: var(--text-color);
+    border-radius: 10px;
+    height: 2.5em;
+    font-size: 0.9em;
+}
+
+.modalReservar .form-select {
+    background: #CCCCCC;
+    color: var(--text-color);
+    border-radius: 10px;
+    height: 2.5em;
+    font-size: 0.9em;
+}
+
+.modalReservar .form-check-input {
+    background: #CCCCCC;
+    border-radius: 10px;
+    height: 2em;
+    width: 2em;
+}
+
+.modalReservar .form-check-input:checked {
+    background-color:  #a1a1a1;
+}
+
+.modalReservar .form-check-label{
+    padding: 0 3%;
+}
+
+.buttonRes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalReservar .btn-primary {
+    color: var(--text-color);
+    background-color: #B8B8B8;
+    border-color: transparent;
+    font-weight: 600;
+    border-radius: 20px;
+    width: 100%;
+    padding: 3% 0;
+}
+
+.modalReservar .btn-primary:hover {
+    color: #fff;
+    background: #515050;
+    border-color:  transparent;
+    transition: all 0.3s;
+}
+
+#entrada, #saida {
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.add-service {
+    display: flex;
+    align-items: center;
+}
+
+.modalReservar .form-label {
+    margin-bottom: .1rem;
+}
+
+.item-add-service{
+    width: 50%;
+    align-items: center;
+    display: flex;
+}
+
+.chk50 {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 1% 1%;
+}
+
+.ct-flex-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.daySelecReserv {
+    background-color: #5c73fff2 !important;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+/* Estilo do botão personalizado */
+.custom-map-control-button {
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    cursor: pointer;
+    margin: 10px;
+    padding: 6px;
+    text-align: center;
+}
+
+.ct-contato {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contato {
+    width: 100%;
+    padding: 2% 10%;
+}
+
+#map-id img {
+    height: 320px;
+    width: auto;
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ct-como-nos-achar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.como-nos-achar h1{
+    font-size: 2.1em;
+    font-weight: 800;
+}
+
+.como-nos-achar h2 {
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+.ct-contatos-uni{
+    display: flex;
+}
+
+.contato-uni {
+    width: 380px;
+    margin: 2%;
+}
+
+.contato-uni h1{
+    padding-top: 0.5em;
+    font-size: 1.1em;
+    font-weight: 800;
+}
+
+.contato-uni h2 {
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.bc-contato-wapp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #2CBF36, #53CE60);
+    color: #fff;
+}
+
+.contatos-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bc-contato-gmail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #D92B2B, #F14336);
+    color: #fff;
+}
+
+.bc-contato-inst {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #FDC057, #E9544C, #BF2CA7);
+    color: #fff;
+}
+
+.ct-msg-exibicao {
+    position: fixed;
+    top: 20px;
+    right: 0;
+    margin: 10px;
+    z-index: 1000;
+}
+
+.msg-exibicao {
+    background-color: #225ec3;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5% 5%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+#msg-text{
+    width: 100%;
+    text-align: center;
+}
+
+
+.ct-msg-retorno-agradescimento{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ct-msg-agradescimento{
+    padding: 5% 25%;
+}
+
+.ct-msg-agradescimento h1{
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+.ct-msg-agradescimento h2{
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.ct-btn-fale-conosco {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-fale-conosco {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.btn-fale-conosco button{
+    margin: 1% 2%;
+    width: 100%;
+}
+
+.bc-tela-cheia{
+    width: 100%;
+    display: flex;
+}
+.bc-tela-login {
+    width: 50%;
+    height: 100vh;
+}
+.bc-img-login {
+    width: 50%;
+    height: 100vh;
+    background-image: url(../css/img/capa-tela-de-login-curta.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.bc-img-login h1 {
+    font-size: 0.8em;
+    font-weight: 200;
+    width: 50%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    padding: 0 2% 2% 2%;
+    color: #fff;
+}
+
+.ct-login {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F3F3F3;
+}
+
+.login {
+    background: #F3F3F3;
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+    /*box-shadow: -15px 15px 15px rgba(0, 0, 0, 0.2);*/
+}
+
+.btn-login {
+    width: 100%;
+    background-color: #009DAC;
+    border: none;
+    border-radius: 05px;
+    color: #F3F3F3;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 1.2em;
+    padding: 2%;
+}
+
+.title-login {
+    margin: 2em 1em;
+}
+
+.title-login h1 {
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.5em;
+    color: #009DAC;
+    margin-bottom: 0.2em;
+}
+
+.title-login h2 {
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.inpup-login input {
+    background-color: #CDCDCD;
+    border-radius: 10px;
+    height: 2.5em;
+}
+.inpup-login input:hover {
+    background-color: #CDCDCD;
+}
+
+.inpup-login .form-label {
+    margin-bottom: .1rem;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.dados-login{
+    width: 450px;
+}
+
+
+
+.ct-menu-adm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    background: #1E1E1E;
+    color: #fff;
+}
+
+.menu-adm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    width: 90%;
+}
+
+.menu-r {
+    display: flex;
+    width: 400px;
+    align-items: center;
+}
+
+.menu-r h1{
+    font-size: 1em;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-top: .5em;
+}
+
+.menu-r img {
+    width: auto;
+    height: 30px;
+    margin: 0 5% 0 0;
+}
+
+.menu-l h1 {
+    width: auto;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+}
+
+.menu-l a {
+    color: #fff !important;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu-l a label{
+    cursor: pointer;
+}
+
+.h1-menu-adm {
+    display: flex;
+}
+
+.ct-reservas {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    background: #ccc;
+}
+
+
+.ct-aprovar-negar {
+    background: #fff;
+    width: 750px;
+    height: 250px;
+    border-radius: 05px;
+    display: flex;
+    justify-content: center;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.ct-aprovar-negar::-webkit-scrollbar {
+    width: 04px; /* Largura da barra de rolagem */
+}
+
+.ct-aprovar-negar::-webkit-scrollbar-track {
+    background: none; /* Cor do fundo da barra de rolagem */
+}
+
+.ct-aprovar-negar::-webkit-scrollbar-thumb {
+    background: #9a9a9a; /* Cor do "polegar" da barra de rolagem */
+    border-radius: 15px; /* Bordas arredondadas do polegar */
+    height: 80%;
+}
+
+.pendencias{
+    padding-left: 2%;
+    display: flex;
+}
+
+.reservas-pendentes h1 {
+    font-size: 1.2em;
+    font-weight: 700;
+    padding-left: 10px;
+    margin-bottom: 0.05em;
+}
+
+#body-adm {
+    background: #ccc !important;
+}
+
+.ct-center-res-pendencias{
+    width: 100%;
+    margin: 1% 2%;
+}
+
+.ct-center-res-aprovadas {
+    width: 100%;
+    margin: 1% 2%;
+}
+
+.client-reserva {
+    background: #f1f1f1;
+    border-radius: 05px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 3%;
+    font-size: 0.9em;
+    margin: 1%;
+}
+
+.client-reserva-concluida {
+    background: #b6d1af77;
+    border-radius: 05px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 3%;
+    font-size: 0.9em;
+    margin: 1%;
+}
+
+
+.date-client, .client-button {
+    display: flex;
+}
+
+.date-client {
+    justify-content: space-between;
+    width: 70%;
+}
+
+.client-button button{
+    margin: 0 2%;
+}
+
+.ct-menu-y-pendencia {
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    border-radius: 05px;
+    margin: 3% 1% auto 1%;
+    width: 55px;
+    padding: 0 1%;
+}
+
+.menu-y-pendencias button {
+    margin: 15% 0;
+}
+
+.ct-modal-edicao {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 37%;
+    right: 0;
+    height: 100vh;
+    font-weight: 400;
+}
+
+.modal-edicao {
+    background-color: #bbbbbb;
+    padding: 5% 5%;
+    width: 100%;
+    height: 100%;
+    box-shadow: -10px 0px 15px rgba(0, 0, 0, 0.2);
+    font-weight: 400;
+}
+
+.formEditReserva {
+    display: none;
+}
+
+.formEditReserva input {
+    background-color: #eee;
+}
+
+.formEditReserva input:focus {
+    background-color: #eee;
+}
+
+.formEditReserva select {
+    background-color: #eee;
+}
+
+.formEditReserva .chk50 input {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.formEditReserva .chk50 input:checked {
+    background-color: #272727;
+}
+
+.center-icon-button-edit button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aviso-edit-modal{
+    margin: 30% 0%;
+}
+
+
+
+#salvar-alteracoes, #descartar-alteracoes {
+    width: 100%;
+    margin-top: 0.5em;
+}
+
+.aviso-edit-modal h1{
+    font-size: 1.5em;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+}
+
+.aviso-edit-modal h2 {
+    font-size: 1em;
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+}
+
+.icon-edit-modal {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btnFecharModal {
+    display: none;
+    width: 100%;
+    margin-top: 0.5em;
+}
+
+
+
+.ct-msg-exibicao-adm {
+    width: 100%;
+    height: 20vh;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.msg-exibicao-adm {
+    background: transparent;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 50px;
+    border-radius: 10px;
+}
+
+
+/* EFEITO ZOOM */
+.zoom-img img {
+    transition: transform 0.3s ease; /* Suaviza o efeito de zoom */
+}
+.zoom-img:hover img {
+    transform: scale(1.05); /* Aumenta a imagem em 10% quando o mouse está em cima */
+}
+.zoom-div {
+    transition: transform 0.3s ease; /* Suaviza o efeito de zoom */
+}
+.zoom-div:hover {
+        transform: scale(1.05); /* Aumenta a div em 10% quando o mouse está em cima */
+}
+
+
+/* EFEITO DE LOADING */
+.ct-loading {
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.loading {
+    display: block;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    border: 5px solid #515050;
+    border-top: 5px solid transparent;
+    border-radius: 50%;
+    animation: loading 1s infinite linear;
+}
+
+.ct-loading-aprovados {
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.loading-aprovados {
+    display: block;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    border: 5px solid #b6d1afff;
+    border-bottom: 5px solid transparent;
+    border-radius: 50%;
+    animation: loading 1s infinite linear;
+}
+
+.ct-loading-flex-block {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.loading-flex-block {
+    display: block;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    border: 5px solid #515050;
+    border-top: 5px solid transparent;
+    border-radius: 50%;
+    animation: loading 1s infinite linear;
+    margin-top: 500%;
+}
+
+@keyframes loading{
+    0%{
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* CELULARES */
+@media screen and (min-width: 0px) and (max-width: 319px) {
+
+    .dados-login {
+        width: 270px;
+    }
+
+    .title-login h1 {
+        font-size: 1.5em;
+    }
+
+    .bc-img-login {
+        display: none;
+    }
+
+    .bc-tela-login {
+        width: 100%;
+    }
+
+    #descartar-alteracoes {
+        display: none;
+    }
+
+    .data-reserva-pen-sai {
+        display: none;
+    }
+
+    .data-reserva-pen-ent {
+        width: 50%;
+    }
+
+    .contEeve50p {
+        width: 50%;
+    }
+
+    .formEditReserva .chk50 input {
+        width: 2em;
+        height: 2em;
+    }
+
+    .client-reserva-concluida, .client-reserva {
+        padding: 2% 3%;
+        margin: 2%
+    }
+
+    .evento-reserva-pen {
+        display: none;
+    }
+
+    #btnFecharModal {
+        display: block;
+    }
+
+    .ent50p {
+        width: 50%;
+    }
+
+    .ct-modal-edicao .form-label {
+        margin-bottom: 0.1em;
+    }
+
+    .ct-modal-edicao input {
+        font-size: 0.8em;
+    }
+
+    .ct-modal-edicao select {
+        font-size: 0.8em;
+    }
+
+    .ct-modal-edicao {
+        display: none;
+        width: 95%;
+        font-size: 0.8em;
+    }
+
+    .modal-edicao {
+        padding: 5%;
+    }
+
+    .ct-menu-y-pendencia {
+        display: none;
+    }
+
+    .ct-aprovar-negar {
+        width: 285px;
+    }
+
+
+    .irParaSite-text {
+        display: none;
+    }
+
+
+    .ct-msg-agradescimento {
+        padding: 3% 5%;
+    }
+
+    .ct-contatos-uni {
+        display: block;
+    }
+
+    #map-id img {
+        height: 120px;
+    }
+
+    .contato-uni {
+        width: 280px;
+        margin: 2%;
+    }
+
+    .ct-flex-block {
+        display: block;
+    }
+
+    .modalReservar {
+        width: 100%;
+        padding: 5% 5%;
+        margin: 5% 0 10% 0;
+        max-width: none;
+    }
+
+    .ct-img {
+        height: auto;
+        width: 155px;
+    }
+
+    .quadroY {
+        height: 190px;
+        width: 155px;
+        padding: 1%;
+    }
+
+    .quadroX {
+        height: 95px;
+        width: 155px;
+        padding: 1%;
+    }
+
+    .mob {
+        display: flex;
+    }
+
+    .mob-z {
+        display: none;
+    }
+
+    .avance-filters svg {
+        text-align: right;
+    }
+
+    .avance-filters {
+        display: flex;
+    }
+
+    #active-eventos, #active-chaDeBebe {
+        display: none;
+    }
+
+    .pacotes-aluguel h1 {
+        font-size: 1.1em;
+    }
+
+    .pacotes-aluguel h2 {
+        font-size: 1em;
+        font-weight: 500;
+    }
+
+    .pacotes {
+        display: block;
+    }
+
+    .pacote {
+        width: 100%;
+        margin: 1% 5%;
+    }
+
+    #navbarNavRedes, #navbarNavMenu {
+        display: none !important;
+    }
+
+    #logo-home {
+        padding-left: 0;
+    }
+
+    .container-fluid {
+        padding: 0px 05%;
+    }
+
+    #menuOpen {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 359px) {
+
+    .dados-login {
+        width: 300px;
+    }
+
+    .title-login h1 {
+        font-size: 1.8em;
+    }
+
+    .bc-img-login {
+        display: none;
+    }
+
+    .bc-tela-login {
+        width: 100%;
+    }
+
+    #descartar-alteracoes {
+        display: none;
+    }
+
+    .data-reserva-pen-sai {
+        display: none;
+    }
+
+    .data-reserva-pen-ent {
+        width: 50%;
+    }
+
+    .contEeve50p {
+        width: 50%;
+    }
+
+    .formEditReserva .chk50 input {
+        width: 2em;
+        height: 2em;
+    }
+
+    .client-reserva-concluida, .client-reserva {
+        padding: 2% 3%;
+        margin: 2%
+    }
+
+    .evento-reserva-pen {
+        display: none;
+    }
+
+    #btnFecharModal {
+        display: block;
+    }
+
+    .ent50p {
+        width: 50%;
+    }
+
+    .ct-modal-edicao .form-label {
+        margin-bottom: 0.1em;
+    }
+
+    .ct-modal-edicao input {
+        font-size: 0.85em;
+    }
+
+    .ct-modal-edicao select {
+        font-size: 0.85em;
+    }
+
+    .ct-modal-edicao {
+        display: none;
+        width: 85%;
+        font-size: 0.85em;
+    }
+
+    .modal-edicao {
+        padding: 5%;
+    }
+
+    .ct-menu-y-pendencia {
+        display: none;
+    }
+
+    .ct-aprovar-negar {
+        width: 345px;
+    }
+
+
+    .irParaSite-text {
+        display: none;
+    }
+
+
+    .ct-msg-agradescimento {
+        padding: 3% 5%;
+    }
+
+    .ct-contatos-uni {
+        display: block;
+    }
+
+    #map-id img {
+        height: 125px;
+    }
+
+    .contato-uni {
+        width: 300px;
+        margin: 2%;
+    }
+
+    .ct-flex-block {
+        display: block;
+    }
+
+    .modalReservar {
+        width: 100%;
+        padding: 5% 5%;
+        margin: 5% 0 10% 0;
+        max-width: none;
+    }
+
+    .ct-img {
+        height: auto;
+        width: 160px;
+    }
+
+    .quadroY {
+        height: 200px;
+        width: 160px;
+        padding: 1%;
+    }
+
+    .quadroX {
+        height: 100px;
+        width: 160px;
+        padding: 1%;
+    }
+
+    .mob {
+        display: flex;
+    }
+
+    .mob-z {
+        display: none;
+    }
+
+    .avance-filters svg {
+        text-align: right;
+    }
+
+    .avance-filters {
+        display: flex;
+    }
+
+    #active-eventos, #active-chaDeBebe {
+        display: none;
+    }
+
+    .pacotes-aluguel h1 {
+        font-size: 1.1em;
+    }
+
+    .pacotes-aluguel h2 {
+        font-size: 1em;
+        font-weight: 500;
+    }
+
+    .pacotes {
+        display: block;
+    }
+
+    .pacote {
+        width: 100%;
+        margin: 1% 5%;
+    }
+
+    #navbarNavRedes, #navbarNavMenu {
+        display: none !important;
+    }
+
+    #logo-home {
+        padding-left: 0;
+    }
+
+    .container-fluid {
+        padding: 0px 05%;
+    }
+
+    #menuOpen {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 379px) {
+
+    .dados-login {
+        width: 320px;
+    }
+
+    .title-login h1 {
+        font-size: 2em;
+    }
+
+    .bc-img-login {
+        display: none;
+    }
+
+    .bc-tela-login {
+        width: 100%;
+    }
+
+    .data-reserva-pen-sai {
+        display: none;
+    }
+
+    .data-reserva-pen-ent {
+        width: 50%;
+    }
+
+    .contEeve50p {
+        width: 50%;
+    }
+
+    .formEditReserva .chk50 input {
+        width: 2em;
+        height: 2em;
+    }
+
+    .client-reserva-concluida, .client-reserva {
+        padding: 2% 3%;
+        margin: 2%
+    }
+
+    .evento-reserva-pen {
+        display: none;
+    }
+
+    #btnFecharModal {
+        display: block;
+    }
+
+    .ent50p {
+        width: 50%;
+    }
+
+    .ct-modal-edicao .form-label {
+        margin-bottom: 0.1em;
+    }
+
+    .ct-modal-edicao input {
+        font-size: 0.9em;
+    }
+
+    .ct-modal-edicao select {
+        font-size: 0.9em;
+    }
+
+    .ct-modal-edicao {
+        display: none;
+        width: 85%;
+        font-size: 0.9em;
+    }
+
+    .modal-edicao {
+        padding: 5%;
+    }
+
+    .ct-menu-y-pendencia {
+        display: none;
+    }
+
+    .ct-aprovar-negar {
+        width: 345px;
+    }
+
+
+
+
+    .irParaSite-text {
+        display: none;
+    }
+
+
+    .ct-msg-agradescimento {
+        padding: 3% 5%;
+    }
+
+    .ct-contatos-uni {
+        display: block;
+    }
+
+    #map-id img {
+        height: 140px;
+    }
+
+    .contato-uni {
+        width: 300px;
+        margin: 2%;
+    }
+
+    .ct-flex-block {
+        display: block;
+    }
+
+    .modalReservar {
+        width: 100%;
+        padding: 5% 5%;
+        margin: 5% 0 10% 0;
+        max-width: none;
+    }
+
+    .ct-img {
+        height: auto;
+        width: 160px;
+    }
+
+    .quadroY {
+        height: 220px;
+        width: 160px;
+        padding: 1%;
+    }
+
+    .quadroX {
+        height: 110px;
+        width: 160px;
+        padding: 1%;
+    }
+
+    .mob {
+        display: flex;
+    }
+
+    .mob-z {
+        display: none;
+    }
+
+    .avance-filters svg {
+        text-align: right;
+    }
+
+    .avance-filters {
+        display: flex;
+    }
+
+    #active-eventos, #active-chaDeBebe {
+        display: none;
+    }
+
+    .pacotes-aluguel h1 {
+        font-size: 1.1em;
+    }
+
+    .pacotes-aluguel h2 {
+        font-size: 1em;
+        font-weight: 500;
+    }
+
+    .pacotes {
+        display: block;
+    }
+
+    .pacote {
+        width: 100%;
+        margin: 1% 5%;
+    }
+
+    #navbarNavRedes, #navbarNavMenu {
+        display: none !important;
+    }
+
+    #logo-home {
+        padding-left: 0;
+    }
+
+    .container-fluid {
+        padding: 0px 05%;
+    }
+
+    #menuOpen {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 380px) and (max-width: 429px) {
+
+    .dados-login {
+        width: 350px;
+    }
+
+    .title-login h1 {
+        font-size: 2.2em;
+    }
+
+    .bc-img-login {
+        display: none;
+    }
+
+    .bc-tela-login {
+        width: 100%;
+    }
+
+    .data-reserva-pen-sai{
+        display: none;
+    }
+
+    .data-reserva-pen-ent {
+        width: 50%;
+    }
+
+    .contEeve50p {
+        width: 50%;
+    }
+
+    .formEditReserva .chk50 input {
+        width: 2em;
+        height: 2em;
+    }
+
+    .client-reserva-concluida, .client-reserva {
+        padding: 2% 3%;
+        margin: 2%
+    }
+
+    .evento-reserva-pen {
+        display: none;
+    }
+
+    #btnFecharModal {
+        display: block;
+    }
+
+    .ent50p {
+        width: 50%;
+    }
+
+    .ct-modal-edicao .form-label {
+        margin-bottom: 0.1em;
+    }
+
+    .ct-modal-edicao input {
+        font-size: 0.9em;
+    }
+
+    .ct-modal-edicao select {
+        font-size: 0.9em;
+    }
+
+    .ct-modal-edicao {
+        display: none;
+        width: 80%;
+        font-size: 0.9em;
+    }
+
+    .modal-edicao {
+        padding: 2% 5%;
+    }
+
+    .ct-menu-y-pendencia {
+        display: none;
+    }
+
+    .ct-aprovar-negar {
+        width: 365px;
+    }
+
+
+
+    .irParaSite-text {
+        display: none;
+    }
+
+    .ct-msg-agradescimento {
+        padding: 3% 5%;
+    }
+
+    .ct-contatos-uni {
+        display: block;
+    }
+
+    #map-id img {
+        height: 150px;
+    }
+
+    .contato-uni {
+        width: 320px;
+        margin: 2%;
+    }
+
+    .ct-flex-block {
+        display: block;
+    }
+
+    .modalReservar {
+        width: 100%;
+        padding: 5% 5%;
+        margin: 5% 0 10% 0;
+        max-width: none;
+    }
+
+    .ct-img {
+        height: auto;
+        width: 180px;
+    }
+
+    .quadroY {
+        height: 240px;
+        width: 180px;
+        padding: 1%;
+    }
+
+    .quadroX {
+        height: 120px;
+        width: 180px;
+        padding: 1%;
+    }
+
+    .mob {
+        display: flex;
+    }
+
+    .mob-z {
+        display: none;
+    }
+
+    .avance-filters svg {
+        text-align: right;
+    }
+
+    .avance-filters {
+        display: flex;
+    }
+
+    #active-eventos, #active-chaDeBebe {
+        display: none;
+    }
+
+    .pacotes-aluguel h1 {
+        font-size: 1.1em;
+    }
+
+    .pacotes-aluguel h2 {
+        font-size: 1em;
+        font-weight: 500;
+    }
+
+    .pacotes {
+        display: block;
+    }
+
+    .pacote {
+        width: 100%;
+        margin: 1% 5%;
+    }
+
+    #navbarNavRedes, #navbarNavMenu {
+        display: none !important;
+    }
+
+    #logo-home {
+        padding-left: 0;
+    }
+
+    .container-fluid {
+        padding: 0px 05%;
+    }
+
+    #menuOpen {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 430px) and (max-width: 459px) {
+
+    .dados-login {
+        width: 390px;
+    }
+
+    .title-login h1 {
+        font-size: 2.3em;
+    }
+
+    .bc-img-login {
+        display: none;
+    }
+
+    .bc-tela-login {
+        width: 100%;
+    }
+
+    .contEeve50p {
+        width: 50%;
+    }
+
+    .formEditReserva .chk50 input {
+        width: 2em;
+        height: 2em;
+    }
+
+    .client-reserva-concluida, .client-reserva {
+        padding: 2% 3%;
+        margin: 2%
+    }
+
+    .evento-reserva-pen {
+        display: none;
+    }
+
+    #btnFecharModal {
+        display: block;
+    }
+
+    .ent50p {
+        width: 50%;
+    }
+
+    .ct-modal-edicao .form-label {
+        margin-bottom: 0.1em;
+    }
+
+    .ct-modal-edicao input {
+        font-size: 0.9em;
+    }
+
+    .ct-modal-edicao select {
+        font-size: 0.9em;
+    }
+
+    .ct-modal-edicao {
+        display: none;
+        width: 80%;
+        font-size: 0.9em;
+    }
+
+    .modal-edicao {
+        padding: 2% 5%;
+    }
+
+    .ct-menu-y-pendencia {
+        display: none;
+    }
+
+    .ct-aprovar-negar {
+        width: 410px;
+    }
+
+
+
+
+    .irParaSite-text {
+        display: none;
+    }
+
+
+    .ct-msg-agradescimento {
+        padding: 3% 5%;
+    }
+
+    .ct-contatos-uni {
+        display: block;
+    }
+
+    #map-id img {
+        height: 150px;
+    }
+
+    .contato-uni {
+        width: 340px;
+        margin: 2%;
+    }
+
+    .ct-flex-block {
+        display: block;
+    }
+
+    .modalReservar {
+        width: 100%;
+        padding: 5% 5%;
+        margin: 5% 0 10% 0;
+        max-width: none;
+    }
+
+    .ct-img {
+        height: auto;
+        width: 120px;
+    }
+
+    .quadroY {
+        height: 200px;
+        width: 120px;
+        padding: 1%;
+    }
+
+    .quadroX {
+        height: 100px;
+        width: 120px;
+        padding: 1%;
+    }
+
+    .avance-filters {
+        display: flex;
+    }
+
+    .avance-filters svg {
+        text-align: right;
+    }
+
+    #active-eventos, #active-chaDeBebe {
+        display: none;
+    }
+
+    .pacotes-aluguel h1 {
+        font-size: 1.1em;
+    }
+
+    .pacotes-aluguel h2 {
+        font-size: 1em;
+        font-weight: 500;
+    }
+
+    .pacotes {
+        display: block;
+    }
+
+    .pacote {
+        width: 100%;
+        margin: 1% 5%;
+    }
+
+    #navbarNavRedes, #navbarNavMenu {
+        display: none !important;
+    }
+
+    #logo-home {
+        padding-left: 0;
+    }
+
+    .container-fluid {
+        padding: 0px 05%;
+    }
+
+    #menuOpen {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 460px) and (max-width: 499px) {
+
+    .dados-login {
+        width: 400px;
+    }
+
+    .title-login h1 {
+        font-size: 2.4em;
+    }
+
+    .bc-img-login {
+        display: none;
+    }
+
+    .bc-tela-login {
+        width: 100%;
+    }
+
+    .evento-reserva-pen {
+        display: none;
+    }
+
+    #btnFecharModal {
+        display: block;
+    }
+
+    .ent50p {
+        width: 50%;
+    }
+
+    .ct-modal-edicao .form-label {
+        margin-bottom: 0.1em;
+    }
+
+    .ct-modal-edicao input {
+        font-size: 0.9em;
+    }
+
+    .ct-modal-edicao select {
+        font-size: 0.9em;
+    }
+
+    .ct-modal-edicao {
+        display: none;
+        width: 75%;
+        font-size: 0.9em;
+    }
+
+    .modal-edicao {
+        padding: 2% 5%;
+    }
+
+    .ct-menu-y-pendencia {
+        display: none;
+    }
+
+    .ct-aprovar-negar {
+        width: 445px;
+    }
+
+
+    .irParaSite-text {
+        display: none;
+    }
+
+
+    .ct-msg-agradescimento {
+        padding: 3% 5%;
+    }
+
+    .ct-contatos-uni {
+        display: block;
+    }
+
+    #map-id img {
+        height: 150px;
+    }
+
+    .contato-uni {
+        width: 350px;
+        margin: 2%;
+    }
+
+    .ct-flex-block {
+        display: block;
+    }
+
+    .modalReservar {
+        width: 100%;
+        padding: 5% 5%;
+        margin: 5% 0 10% 0;
+        max-width: none;
+    }
+
+    .ct-img {
+        height: auto;
+        width: 150px;
+    }
+
+    .quadroX {
+        height: 150px;
+        width: 150px;
+        padding: 1%;
+    }
+
+    .quadroY {
+        height: 300px;
+        width: 150px;
+        padding: 1%;
+    }
+
+    .avance-filters {
+        display: flex;
+    }
+
+    .avance-filters svg{
+        text-align: right;
+    }
+
+    #active-eventos, #active-chaDeBebe {
+        display: none;
+    }
+
+    .pacotes-aluguel h1 {
+        font-size: 1.1em;
+    }
+
+    .pacotes-aluguel h2 {
+        font-size: 1em;
+        font-weight: 500;
+    }
+
+    .pacotes {
+        display: block;
+    }
+
+    .pacote {
+        width: 100%;
+        margin: 1% 5%;
+    }
+
+    #navbarNavRedes, #navbarNavMenu {
+        display: none !important;
+    }
+
+    #logo-home {
+        padding-left: 0;
+    }
+
+    .container-fluid {
+        padding: 0px 05%;
+    }
+
+    #menuOpen {
+        display: flex;
+    }
+}
+
+
+/* TABLEST OU MONITORES PEQUENOS */
+@media screen and (min-width: 500px) and (max-width: 599px) {
+
+    .dados-login {
+        width: 400px;
+    }
+
+    .title-login h1 {
+        font-size: 2.4em;
+    }
+    .bc-img-login {
+        display: none;
+    }
+
+    .bc-tela-login {
+        width: 100%;
+    }
+
+    .evento-reserva-pen {
+        display: none;
+    }
+
+    #btnFecharModal {
+        display: block;
+    }
+
+    .ent50p {
+        width: 50%;
+    }
+
+    .ct-modal-edicao .form-label {
+        margin-bottom: 0.1em;
+    }
+
+    .ct-modal-edicao input {
+        font-size: 0.9em;
+    }
+
+    .ct-modal-edicao select {
+        font-size: 0.9em;
+    }
+
+    .ct-modal-edicao {
+        display: none;
+        width: 70%;
+        font-size: 0.9em;
+    }
+
+    .modal-edicao {
+        padding: 2% 5%;
+    }
+
+    .ct-menu-y-pendencia {
+        display: none;
+    }
+
+    .ct-aprovar-negar {
+        width: 480px;
+    }
+
+
+
+
+
+    .irParaSite-text {
+        display: none;
+    }
+
+
+    #map-id img {
+        height: 200px;
+    }
+
+    .contato-uni {
+        width: 250px;
+        margin: 2%;
+    }
+
+    .ct-flex-block {
+        display: block;
+    }
+
+    .modalReservar {
+        width: 100%;
+        padding: 5% 5%;
+        margin: 5% 0 10% 0;
+        max-width: none;
+    }
+
+    .foto-filters {
+        font-size: 0.9em;
+    }
+
+    .ct-img {
+        height: auto;
+        width: 165px;
+    }
+
+    .quadroX {
+        height: 165px;
+        width: 165px;
+        padding: 1%;
+    }
+
+    .quadroY {
+        height: 330px;
+        width: 165px;
+        padding: 1%;
+    }
+
+    .pacotes {
+        display: block;
+    }
+
+    .pacote {
+        width: 100%;
+        margin: 1% 5%;
+    }
+
+    #navbarNavRedes, #navbarNavMenu {
+        display: none !important;
+    }
+
+    #logo-home {
+        padding-left: 0;
+    }
+
+    .container-fluid {
+        padding: 0px 05%;
+    }
+
+    #menuOpen {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 669px) {
+
+    .bc-img-login {
+        display: none;
+    }
+
+    .bc-tela-login {
+        width: 100%;
+    }
+
+
+    .evento-reserva-pen {
+        display: none;
+    }
+
+    #btnFecharModal {
+        display: block;
+    }
+
+    .ent50p {
+        width: 50%;
+    }
+
+    .ct-modal-edicao .form-label {
+        margin-bottom: 0.1em;
+    }
+
+    .ct-modal-edicao input {
+        font-size: 0.9em;
+    }
+
+    .ct-modal-edicao select {
+        font-size: 0.9em;
+    }
+
+    .ct-modal-edicao {
+        display: none;
+        width: 65%;
+        font-size: 0.9em;
+    }
+
+    .modal-edicao {
+        padding: 2% 5%;
+    }
+
+    .ct-menu-y-pendencia {
+        display: none;
+    }
+
+    .ct-aprovar-negar {
+        width: 575px;
+    }
+
+    #map-id img {
+        height: 250px;
+    }
+
+    .contato-uni {
+        width: 300px;
+        margin: 2%;
+    }
+
+    .ct-flex-block {
+        display: block;
+    }
+
+    .modalReservar {
+        width: 100%;
+        padding: 5% 5%;
+        margin: 5% 0 10% 0;
+        max-width: none;
+    }
+
+    .ct-img {
+        height: auto;
+        width: 195px;
+    }
+
+    .quadroX {
+        height: 165px;
+        width: 195px;
+        padding: 1%;
+    }
+
+    .quadroY {
+        height: 330px;
+        width: 195px;
+        padding: 1%;
+    }
+
+    .pacotes {
+        display: block;
+    }
+
+    .pacote {
+        width: 100%;
+        margin: 1% 5%;
+    }
+
+    #navbarNavRedes, #navbarNavMenu {
+        display: none !important;
+    }
+
+    #logo-home {
+        padding-left: 0;
+    }
+
+    .container-fluid {
+        padding: 0px 05%;
+    }
+
+    #menuOpen {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 670px) and (max-width: 749px) {
+
+    .bc-img-login {
+        display: none;
+    }
+
+    .bc-tela-login {
+        width: 100%;
+    }
+
+    .evento-reserva-pen{
+        display: none;
+    }
+
+    #btnFecharModal {
+        display: block;
+    }
+
+    .ent50p {
+        width: 50%;
+    }
+
+    .ct-modal-edicao .form-label {
+        margin-bottom: 0.1em;
+    }
+
+    .ct-modal-edicao input {
+        font-size: 0.9em;
+    }
+
+    .ct-modal-edicao select {
+        font-size: 0.9em;
+    }
+
+    .ct-modal-edicao {
+        display: none;
+        width: 60%;
+        font-size: 0.9em;
+    }
+
+    .modal-edicao {
+        padding: 2% 5%;
+    }
+
+    .ct-aprovar-negar {
+        width: 590px;
+    }
+
+
+    #map-id img {
+        height: 250px;
+    }
+
+    .contato-uni {
+        width: 300px;
+        margin: 2%;
+    }
+
+    .ct-flex-block {
+        display: block;
+    }
+
+    .modalReservar {
+        width: 100%;
+        padding: 5% 5%;
+        margin: 5% 0 10% 0;
+        max-width: none;
+    }
+
+    .ct-img {
+        height: auto;
+        width: 220px;
+    }
+
+    .quadroX {
+        height: 175px;
+        width: 220px;
+        padding: 1%;
+    }
+
+    .quadroY {
+        height: 350px;
+        width: 220px;
+        padding: 1%;
+    }
+
+    .pacotes {
+        display: block;
+    }
+
+    .pacote {
+        width: 100%;
+        margin: 1% 5%;
+    }
+
+    #navbarNavRedes, #navbarNavMenu {
+        display: none !important;
+    }
+
+    #logo-home {
+        padding-left: 0;
+    }
+
+    .container-fluid {
+        padding: 0px 05%;
+    }
+
+    #menuOpen {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 899px) {
+
+    .bc-img-login {
+        display: none;
+    }
+
+    .bc-tela-login {
+        width: 100%;
+    }
+
+    #btnFecharModal{
+        display: block;
+    }
+
+    .ent50p {
+        width: 50%;
+    }
+
+    .ct-modal-edicao .form-label {
+        margin-bottom: 0.1em;
+    }
+
+    .ct-modal-edicao input{
+        font-size: 0.9em;
+    }
+
+    .ct-modal-edicao select {
+        font-size: 0.9em;
+    }
+
+    .ct-modal-edicao {
+        display: none;
+        width: 55%;
+        font-size: 0.9em;
+    }
+
+    .modal-edicao {
+        padding: 2% 5%;
+    }
+
+    .ct-aprovar-negar {
+        width: 665px;
+    }
+
+    .ct-flex-block {
+        display: block;
+    }
+
+    .modalReservar {
+        width: 100%;
+        padding: 5% 5%;
+        margin: 5% 0 10% 0;
+        max-width: none;
+    }
+
+    .ct-img {
+        height: auto;
+        width: 240px;
+    }
+
+    .quadroX {
+        height: 185px;
+        width: 240px;
+        padding: 1%;
+    }
+
+    .quadroY {
+        height: 370px;
+        width: 240px;
+        padding: 1%;
+    }
+
+    .ct-desc-pacote h1{
+        font-size: 0.9em;
+    }
+
+    .ct-desc-pacote h2 {
+        font-size: 0.8em;
+    }
+
+    #navbarNavRedes, #navbarNavMenu {
+        display: none !important;
+    }
+
+    #logo-home {
+        padding-left: 0;
+    }
+
+    .container-fluid {
+        padding: 0px 05%;
+    }
+
+    #menuOpen {
+        display: flex;
+    }
+}
+
+
+/* DESKTOPS */
+@media screen and (min-width: 900px) and (max-width: 990px) {
+
+    .bc-img-login {
+        display: none;
+    }
+
+    .bc-tela-login {
+        width: 100%;
+    }
+    .ct-menu-y-pendencia {
+        display: none;
+    }
+
+    .ct-aprovar-negar {
+        width: 550px;
+        height: 250px;
+        font-size: 0.9em;
+    }
+
+    .ct-modal-edicao {
+        width: 35%;
+    }
+
+    .ct-img {
+        height: auto;
+        width: 280px;
+    }
+
+    .quadroY {
+        height: 380px;
+        width: 280px;
+        padding: 1%;
+    }
+
+    .quadroX {
+        height: 190px;
+        width: 280px;
+        padding: 1%;
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1023px) {
+
+    .bc-img-login {
+        display:none;
+    }
+
+    .bc-tela-login {
+        width: 100%;
+    }
+
+    .ct-menu-y-pendencia {
+        display: none;
+    }
+
+    .ct-aprovar-negar {
+        width: 550px;
+        height: 250px;
+        font-size: 0.9em;
+    }
+
+    .ct-modal-edicao {
+        width: 35%;
+    }
+
+    #navbarNavRedes, #navbarNavMenu {
+        display: none !important;
+    }
+
+    #logo-home {
+        padding-left: 0;
+    }
+
+    .container-fluid {
+        padding: 0px 05%;
+    }
+
+    #menuOpen {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1100px) {
+    .ct-menu-y-pendencia {
+        display: none;
+    }
+
+    .ct-aprovar-negar {
+        width: 650px;
+        height: 240px;
+        font-size: 0.9em;
+    }
+
+    .ct-modal-edicao {
+        width: 35%;
+    }
+
+}
+
+@media screen and (min-width: 1101px) and (max-width: 1280px) {
+    .ct-menu-y-pendencia {
+        display: none;
+    }
+
+    .ct-aprovar-negar {
+        width: 690px;
+        height: 240px;
+        font-size: 0.9em;
+    }
+
+    .ct-modal-edicao {
+        width: 35%;
+    }
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1330px) {
+    .ct-modal-edicao {
+        width: 35%;
+    }
+}
+

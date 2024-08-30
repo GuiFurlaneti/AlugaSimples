@@ -1,0 +1,244 @@
+﻿@{
+	ViewData["Title"] = "Inicio";
+}
+
+
+<html>
+
+<head>
+	<!-- Icon nav bar -->
+	<link rel="shortcut icon" href="~/css/img/icone-site.png" type="image/x-icon">
+
+	<title>Painel de acesso</title>
+</head>
+<body id="body-adm">
+	
+	<!-- Menu Bar -->
+	<div class="ct-menu-adm">
+		<div class="menu-adm">
+			<div class="menu-r">
+				<img src="~/css/img/sua-logo-aqui-white.png" />
+				<h1>Painel de Reservas</h1><input type="hidden" id="typeNameAdm" value="PaineldeReservas" />
+			</div>
+			<div class="menu-l">
+				<a href="@Url.Action("Index", "Home")" target="_blank">
+					<h1 class="h1-menu-adm">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+							<path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z" />
+							<path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
+						</svg><label class="irParaSite-text">&nbsp;Ir para o site</label>
+					</h1>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="ct-reservas">
+
+		<div class="ct-pendencias">
+
+			<!-- RESERVAS PENDENTES -->
+			<div class="pendencias mt-1">
+				<div class="ct-reservas-pendentes">
+					<div class="reservas-pendentes">
+						<h1>Reservas Pendentes</h1>
+						<div class="ct-aprovar-negar">
+							<div class="ct-center-res-pendencias">
+
+								<div class="ct-loading">
+									<div class="loading"></div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="ct-menu-y-pendencia">
+					<div class="menu-y-pendencias">
+						<button type="button" class="btn btn-outline-dark" onclick="listarReservasPendentes();">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+								<path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z" />
+								<path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466" />
+							</svg>
+						</button>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- RESERVAS ABERTAS -->
+			<div class="pendencias mt-2">
+				<div class="ct-reservas-pendentes">
+					<div class="reservas-pendentes">
+						<h1>Reservas Aprovadas</h1>
+						<div class="ct-aprovar-negar">
+							<div class="ct-center-res-aprovadas">
+
+								<div class="client-reserva-aprovada">
+								</div>
+
+								<div class="ct-loading-aprovados">
+									<div class="loading-aprovados"></div>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="ct-menu-y-pendencia">
+					<div class="menu-y-pendencias">
+						<button type="button" class="btn btn-outline-dark" onclick="listarReservasAprovadas();">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+								<path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z" />
+								<path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466" />
+							</svg>
+						</button>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<!-- MODAL DE EDIÇÃO -->
+		<div class="ct-modal-edicao">
+			<div class="modal-edicao">
+				<div class="modal-dados">
+					<div class="formEditReserva">
+						<div class="mb-2">
+
+							<label class="form-label">Nome *</label>
+							<input type="text" class="form-control mb-2" id="name" placeholder="Digite seu nome" autocomplete="off" maxlength="20">
+							<input type="hidden" id="idUsuario" disabled>
+
+							<div class="mt-1 mb-2">
+								<div class="row">
+									<div class="col-md-6 contEeve50p">
+										<label class="form-label">Contato *</label>
+										<input type="text" class="form-control mb-2" id="tel" placeholder="Digite seu telefone" autocomplete="off" maxlength="11">
+									</div>
+									<div class="col-md-6 contEeve50p">
+										<label class="form-label">Tipo de Evento *</label>
+										<select class="form-select mb-2" id="tipo-evento" Default select example">
+											<option value="CASAMENTO">Casamento</option>
+											<option value="ANIVERSÁRIO" selected>Aniversário</option>
+											<option value="FESTA">Festa</option>
+											<option value="EVENTO">Evento</option>
+										</select>
+									</div>
+								</div>
+							</div>
+
+							<label class="form-label">Opções de pagamento *</label>
+							<select class="form-select mb-2" aria-label="Default select example" id="pagamento">
+								<option value="BOLETO BANCÁRIO">Boleto Bancário</option>
+								<option value="PIX" selected>Pix</option>
+								<option value="DINHEIRO">Dinheiro</option>
+								<option value="CARTÃO">Cartão</option>
+							</select>
+
+							<label class="form-label">Serviços Adicionais *</label>
+							<div>
+								<div class="add-service">
+
+									<div class="chk50">
+										<input class="form-check-input" type="checkbox" id="Nenhum" value="Nenhum" checked onchange="checkServicesAdd();">
+										<label class="form-check-label" for="flexCheckDefault">
+											Nenhum
+										</label>
+									</div>
+
+									<div class="chk50">
+										<input class="form-check-input" type="checkbox" id="Equipamentos" value="Equipamentos" onchange="checkServicesAdd();">
+										<label class="form-check-label" for="flexCheckDefault">
+											Equipamentos
+										</label>
+									</div>
+
+								</div>
+
+								<div class="add-service">
+
+									<div class="chk50">
+										<input class="form-check-input" type="checkbox" id="Decoracao" value="Decoração" onchange="checkServicesAdd();">
+										<label class="form-check-label" for="flexCheckDefault">
+											Decoração
+										</label>
+									</div>
+
+									<div class="chk50">
+										<input class="form-check-input" type="checkbox" id="Catering" value="Catering" onchange="checkServicesAdd();">
+										<label class="form-check-label" for="flexCheckDefault">
+											Catering
+										</label>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="mt-1 mb-2">
+								<div class="row">
+									<div class="col-md-6 ent50p">
+										<label class="form-label" for="entrada">Entrada</label>
+										<input type="date" class="form-control" id="entrada" onchange="updateMinDateEdit(this)">
+									</div>
+									<div class="col-md-6 ent50p">
+										<label class="form-label" for="entrada">Saída</label>
+										<input type="date" class="form-control" id="saida" onchange="updateMinDateEdit(this)">
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<div class="center-icon-button-edit">
+							<button type="button" id="salvar-alteracoes" class="btn btn-dark" onclick="alterarReserva();">
+								Salvar Alterações&nbsp;
+								<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+									<path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
+								</svg>
+							</button>
+							<button type="button" id="descartar-alteracoes" class="btn btn-outline-danger" onclick="descartarAlteracoes();">
+								Descartar Alterações&nbsp;
+								<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+									<path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
+								</svg>
+							</button>
+							<button type="button" id="btnFecharModal" class="btn btn-primary" onclick="fecharModalEditar();">
+								Fechar&nbsp;
+								<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+									<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z" />
+								</svg>
+							</button>
+						</div>
+					</div>
+
+
+					<div class="aviso-edit-modal">
+						<div class="icon-edit-modal">
+							<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+								<path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+								<path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+							</svg>
+						</div>
+						<h1>Editar/Alterar Reservas</h1>
+						<h2>Faça as alterações necessárias em reservas já confirmadas. Ajuste detalhes, adicione informações ou modifique conforme a necessidade.</h2>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- MSG DE EXIBIÇÃO -->
+	<div class="ct-msg-exibicao-adm">
+		<div class="msg-exibicao-adm" id="msg-exibicao-adm">
+			<label id="msg-text-adm"></label>
+		</div>
+	</div>
+</body>
+</html>
+

@@ -1,0 +1,71 @@
+﻿@{
+	ViewData["Title"] = "Agendas";
+}
+
+
+<html>
+
+<head>
+	<!-- Icon nav bar -->
+	<link rel="shortcut icon" href="~/css/img/icone-site.png" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+	<title>Home</title>
+</head>
+<body>
+
+	<div class="bc-tela-cheia">
+		<div class="bc-img-login">
+			<h1>A Neonova é uma empresa especializada em criar 
+				experiências digitais incríveis. Com uma equipe
+				de especialistas em desenvolvimento web e design
+				gráfico, estamos prontos para levar seu negócio
+				ao próximo nível.</h1>
+		</div>
+
+		<div class="bc-tela-login">
+			<!-- MSG DE EXIBIÇÃO -->
+			<div class="ct-msg-exibicao">
+				<div class="msg-exibicao" id="msg-exibicao">
+					<label id="msg-text"></label>
+				</div>
+			</div>
+
+			<div class="ct-login">
+				<div class="login">
+					<div class="dados-login">
+						<div class="title-login">
+							<h1>SEJA BEM-VINDO</h1>
+							<h2>Entre com a sua conta para acessar o painel</h2>
+						</div>
+						<div class="mb-3 inpup-login">
+							<label class="form-label">Email ou Usuario</label>
+							<input class="form-control" tabindex="1" id="id_usuario" autocomplete="off" placeholder="Digite seu email">
+						</div>
+						<div class="mb-3 inpup-login">
+							<label class="form-label">Senha</label>
+							<input type="password" tabindex="2" class="form-control" id="id_senha" autocomplete="off" placeholder="Digite sua senha">
+						</div>
+						<button tabindex="3" class="btn-login" id="clickloginButton" onclick="validaLogin();">Entrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- RODAPE -->
+	<div class="rodape">
+		<label id="txt_rodape">Copyright © 2024 – Todos os Direitos Reservados.</label>
+	</div>
+
+	<script>
+		document.addEventListener('keydown', function (event) {
+			if (event.key === 'Enter') {
+				document.getElementById('clickloginButton').click();
+			}
+		});
+	</script>
+</body>
+</html>
+
