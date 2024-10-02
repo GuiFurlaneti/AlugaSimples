@@ -7,8 +7,6 @@ Este projeto foi desenvolvido em .NET C# e está hospedado na plataforma Azure. 
 serviço completo de reservas, permitindo que usuários agendem seus espaços favoritos de maneira fácil e
 segura, enquanto os proprietários têm total controle sobre as reservas via um painel administrativo exclusivo.
 
-Conheça Já: https://alugasimples-aqeyasgdccadf4dt.brazilsouth-01.azurewebsites.net
-
 -----------------------------------------------------------------------------------------
 Para o usuario:
 -----------------------------------------------------------------------------------------
