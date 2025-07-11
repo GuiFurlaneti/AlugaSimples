@@ -75,17 +75,6 @@ Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para ma
 
 
 -----------------------------------------------------------------------------------------
-Contato
------------------------------------------------------------------------------------------
-Se tiver dúvidas ou precisar das credenciais para testar o login, entre em contato:
+## 👨‍💻 Sobre minha participação
 
-Nome: Leandro Silva Sampaio
-
-Telefone (Whatsapp): +55 11 98557-0037
-
-Email: Leandro_sampaio.dasilva1@outlook.com
-
-LinkedIn: https://www.linkedin.com/in/leandro-sampaio-66248b230/
-
-Portifólio web: https://leandrosampaio7.github.io/webpage/index
-
+Atuei como colaborador júnior, auxiliando no desenvolvimento da interface do usuário, testes das funcionalidades e revisão da responsividade.
